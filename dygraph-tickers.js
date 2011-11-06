@@ -114,7 +114,7 @@ Dygraph.numericTicks = function(a, b, pixels, opts, dygraph, vals) {
       // Calculate the resulting tick spacing (i.e. this.height_ / nTicks).
       // The first spacing greater than pixelsPerYLabel is what we use.
       // TODO(danvk): version that works on a log scale.
-      var kmg2 = opts("labelsKMG2");
+      var kmg2 = opts("labelsKMG2") || opts("axisBase2");
       if (kmg2) {
         var mults = [1, 2, 4, 8];
       } else {
